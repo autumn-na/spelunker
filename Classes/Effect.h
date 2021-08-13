@@ -1,0 +1,192 @@
+#pragma once
+
+#include "cocos2d.h"
+
+using namespace cocos2d;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//Clicker Scene//////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+class MonsterDamaged : public ActionInterval, public Sequence
+{
+	public:
+		static Sequence* create();
+
+	CC_CONSTRUCTOR_ACCESS:
+		MonsterDamaged() {}
+		virtual ~MonsterDamaged() {}
+
+	private:
+		CC_DISALLOW_COPY_AND_ASSIGN(MonsterDamaged);
+};
+
+class PlayerDamagedByMonster : public ActionInterval
+{
+	public:
+		static Sequence* create(Sprite* spr_port);
+
+	CC_CONSTRUCTOR_ACCESS:
+		PlayerDamagedByMonster() {}
+		virtual ~PlayerDamagedByMonster() {}
+
+	private:
+		CC_DISALLOW_COPY_AND_ASSIGN(PlayerDamagedByMonster);
+};
+
+class PlayerDamagedEffect : public ActionInterval
+{
+public:
+	static Sequence* create();
+
+CC_CONSTRUCTOR_ACCESS:
+	PlayerDamagedEffect() {}
+	virtual ~PlayerDamagedEffect() {}
+
+private:
+	CC_DISALLOW_COPY_AND_ASSIGN(PlayerDamagedEffect);
+};
+
+class PlayerLowHP : public ActionInterval
+{
+	public:
+		static Sequence* create();
+
+	CC_CONSTRUCTOR_ACCESS:
+		PlayerLowHP() {}
+		virtual ~PlayerLowHP() {}
+
+	private:
+		CC_DISALLOW_COPY_AND_ASSIGN(PlayerLowHP);
+};
+
+class PlayerHighHP : public ActionInterval
+{
+	public:
+		static Sequence* create();
+
+	CC_CONSTRUCTOR_ACCESS:
+		PlayerHighHP() {}
+		virtual ~PlayerHighHP() {}
+
+	private:
+		CC_DISALLOW_COPY_AND_ASSIGN(PlayerHighHP);
+};
+
+class DamagedPortrait : public ActionInterval
+{
+public:
+	static Sequence* create();
+
+CC_CONSTRUCTOR_ACCESS:
+	DamagedPortrait() {}
+	virtual ~DamagedPortrait() {}
+
+private:
+	CC_DISALLOW_COPY_AND_ASSIGN(DamagedPortrait);
+};
+
+class DamagedHPBar : public ActionInterval
+{
+public:
+	static Sequence* create();
+
+CC_CONSTRUCTOR_ACCESS:
+	DamagedHPBar() {}
+	virtual ~DamagedHPBar() {}
+
+private:
+	CC_DISALLOW_COPY_AND_ASSIGN(DamagedHPBar);
+};
+
+class SkillGaugeUp : public ActionInterval
+{
+public:
+	static Sequence* create();
+
+CC_CONSTRUCTOR_ACCESS:
+	SkillGaugeUp() {}
+	virtual ~SkillGaugeUp() {}
+
+private:
+	CC_DISALLOW_COPY_AND_ASSIGN(SkillGaugeUp);
+};
+
+class ArrowFadeIn : public ActionInterval
+{
+	public:
+		static Sequence* create();
+
+	CC_CONSTRUCTOR_ACCESS:
+		ArrowFadeIn() {}
+		virtual ~ArrowFadeIn() {}
+
+	private:
+		CC_DISALLOW_COPY_AND_ASSIGN(ArrowFadeIn);
+};
+
+class ArrowFadeOut : public ActionInterval
+{
+public:
+	static Sequence* create();
+
+	CC_CONSTRUCTOR_ACCESS:
+	ArrowFadeOut() {}
+	virtual ~ArrowFadeOut() {}
+
+	enum ArrowDirection
+	{
+		LEFT_UP,
+		LEFT_DOWN,
+		RIGHT_UP,
+		RIGHT_DOWN,
+		NONE = 99
+	};
+
+private:
+	CC_DISALLOW_COPY_AND_ASSIGN(ArrowFadeOut);
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//여기까지 Clicker Scene/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//Block Scene////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+class FireCombo : public ActionInterval
+{
+
+};
+
+class PlayerDamagedByBlock : public ActionInterval
+{
+
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//여기까지 Block Scene///////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//Upgrade Scene//////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+class UpgradeSuccese : public ActionInterval
+{
+
+};
+
+class UpgradeFail : public ActionInterval
+{
+
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//여기까지 Upgrade Scene/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
