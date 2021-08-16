@@ -7,9 +7,10 @@ Spelunker is a casual game using Cocos2d-x.
 
 ## Changelog
 ### [Unreleased] - 2017-02-17
-Project ended
+Project finished.
 ### [Unreleased] - 2021-08-13
-Upload full project to github.
+Added
+- Upload full project to github.
 ### [Unreleased] - 2021-08-16
 Added
 - readme.md
