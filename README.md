@@ -11,11 +11,11 @@ Project finished.
 ### [Unreleased] - 2021-08-13
 Added
 - Upload full project to github.
-### [Unreleased] - 2021-08-16
+### [Unreleased] - 2021-08-17
 Added
 - readme.md
 
-## Contributing
+## Contributors
 - Minseok Jeong
 - Seokcheon Jang
 - Yoonhwan Jung
